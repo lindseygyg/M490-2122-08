@@ -6,6 +6,20 @@ body {
     flex-direction: column;
 }
 
+.container-fluid{
+    /*display: flex;
+    flex-direction: column;*/
+    min-height: 100vh;
+    position: relative;
+    /*overflow:auto;*/
+    padding: 5px 50px 15px 50px;
+    /* Top, right, bottom, left padding */
+}
+
+h1{
+    padding-left: 25px;
+}
+
 .navbar {
     background-color: black;
     border-radius: 30px;
@@ -38,15 +52,23 @@ body {
     width: 129px;
 }
 
-.maincontent {
-    padding: 25px 50px 50px 50px;
-    /* Top, right, bottom, left padding */
-}
-
 .footer {
-    position: absolute;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    position: fixed;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    min-height: 2vh;
+    /* position: absolute;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: black;
     /* Height of the footer */
+    margin-top: auto;
+    color: white;
+    background-color: black;
 }
