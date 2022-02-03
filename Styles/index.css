@@ -54,6 +54,17 @@ h1{
     width: 100%;
 }
 
+div {
+  background-color: white;
+  margin: 2px;
+  font-size: 25px;
+  border: black;
+}
+.instruction{
+
+}
+
+
 .footer {
     margin-top: auto;
     position: fixed;
