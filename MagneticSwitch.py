@@ -1,18 +1,21 @@
 import time
-from RPi.GPIO import GPIO
+import RPi.GPIO as GPIO
 
 class MagneticSwitch:
-    def __init__(self, pin):
+    def __init__(self, pin, test=False):
         self.magPIN = pin
-        GPIO.setmode(GPIO.BOARD) # broadcom
+        if test:
+            GPIO.setmode(GPIO.BOARD)
         GPIO.setup(self.magPIN, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
     def testSwitch(self):
-        # Verify the switch works
         count = 0
+        print("Testing touch contact for 10 seconds:")
         while count < 10:
             print(GPIO.input(self.magPIN))
             count += 1
+            time.sleep(1)
+        print("Finished testSwitch function.")
 
     def checkSwitch(self):
         # Returns true if magnet has been activated
@@ -20,3 +23,14 @@ class MagneticSwitch:
             return True
         else:
             return False
+
+if __name__ == '__main__':
+    ms = MagneticSwitch(22, True) # BCM 25
+    try:
+        while 1:
+            print(ms.testSwitch())
+
+    except KeyboardInterrupt:
+        print("Testing complete.")
+
+
