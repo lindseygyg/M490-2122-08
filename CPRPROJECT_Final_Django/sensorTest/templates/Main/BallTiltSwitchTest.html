@@ -1,0 +1,20 @@
+{% extends 'Main/base.html' %}
+
+{% block content_block %}
+
+<div class="maincontent">
+<h1>Ball Tilt Switch Test </h1>
+    <p> Now check if Ball tilt sensor is working <br>
+        You can do so by tilting the head and then pressing the "Check" button <br>
+      </p>
+
+<form action ="{% url 'BallTiltResult' %}">
+<input type ="submit" Value="Check"></form>
+
+<form action ="{% url 'TestSensor' %}">
+    <input type="submit" Value="Main page">
+</form>
+
+</div>
+<br>
+{% endblock %}

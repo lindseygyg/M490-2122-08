@@ -1,24 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'Main/base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>M490-2122-08 CPR</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../Styles/index.css">
-</head>
-
-<body>
-    <header>
-        <h1>CPR MANIKIN WEBSITE (M490-2122-08)</h1>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutTeam.html">About</a></li>
-                <li><a href="aboutCPR.html">CPR Steps</a></li>
-            </ul>
-        </nav>
-    </header>
+{% block content_block %}
 
     <div class="maincontent">
         <div class="container-fluid">
@@ -37,10 +19,5 @@
     </div>
     <br>
 
-    <div class="footer">
-        <div class="">
-            <h6>Copyright © 2021-2022 M490-2122-08 inc.</h6>
-        </div>
-    </div>
 
-</body>
+{% endblock %}

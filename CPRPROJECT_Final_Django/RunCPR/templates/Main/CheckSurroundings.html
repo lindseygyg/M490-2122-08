@@ -1,0 +1,17 @@
+{% extends 'Main/base.html' %}
+{% load static %}
+{% block content_block %}
+
+<div class="maincontent">
+<h1>Step 1</h1>
+<p> REMEMBER TO CHECK SURROUNDINGS (look for open wires, electricity, flood, animals, etc),<br>
+    IF SOMEONE IS NEXT TO YOU, POINT TO THEM AND TELL THEM TO CALL 911. SAY: YOU CALL 911 <br>
+    IF SOMEONE ELSE IS NEXT TO YOU, POINT TO THEM AND TELL THEM TO GET YOU AN AED. SAY: YOU GET ME AN AED <br>
+    Once the surrounding has been deemed safe, go the person and shake them by the shoulders to make sure <br>
+    they are not sleeping.</p> <br>
+
+<form action ="{% url 'TouchSwitchinstructions' %}">
+<input type ="submit" Value=" Next Step"></form>
+
+</div>
+{% endblock %}

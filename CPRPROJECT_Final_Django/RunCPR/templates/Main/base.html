@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>M490-2122-08 CPR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'RunCPR/index.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1>CPR MANIKIN WEBSITE (M490-2122-08)</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'aboutTeam' %}">About</a></li>
+                <li><a href="{% url 'aboutCPR' %}">CPR Steps</a></li>
+		<li><a href="{% url 'TestSensor' %}">Test Sensors</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+    {% block content_block %}
+    {% endblock %}
+    
+    <div class="footer">
+        <div class="">
+            <h6>Copyright © 2021-2022 M490-2122-08 inc.</h6>
+        </div>
+    </div>
+</body>
+  
+
+</html>

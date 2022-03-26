@@ -1,0 +1,20 @@
+{% extends 'Main/base.html' %}
+
+{% block content_block %}
+
+<div class="maincontent">
+<h1>Compression System Test </h1>
+    <p> Now check if the compression System Sensor is working <br>
+        Please press start, then start compression. <br>
+        Push the compression System all the way down three times </p>
+
+<form action ="{% url 'CompressionResult' %}">
+<input type ="submit" Value="Start"></form>
+
+<form action ="{% url 'TestSensor' %}">
+    <input type="submit" Value="Main page"></form>
+
+
+</div>
+<br>
+{% endblock %}

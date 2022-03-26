@@ -1,0 +1,17 @@
+{% extends 'Main/base.html' %}
+
+{% block content_block %}
+
+<div class="maincontent">
+<h1>Pulse Check</h1>
+<p> Now, check the pulse, <br>
+    With your index finger and your middle finger together, place them gently on the carotid artery of the neck.<br>
+    Either side is acceptable <br>
+    Feel for the pulse for 10 seconds.</p>
+
+<form action ="{% url 'pulse' %}">
+<input type ="submit" Value="Start"></form>
+
+</div>
+<br>
+{% endblock %}

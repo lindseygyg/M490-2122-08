@@ -1,0 +1,20 @@
+{% extends 'Main/base.html' %}
+
+{% block content_block %}
+
+<div class="maincontent">
+<h1> AED Pads Placement </h1>
+
+<p> You have placed the AED pads correctly: {{AED_results}} </p>
+<p>
+  {% load static %} <img src="{% static "RunCPR/placeAEDPads.jpg" %}" alt="AED Pad placement"/>
+</p>
+
+<form action ="{% url 'aed' %}" id="next">
+<input type ="submit" Value="Try again"></form>
+<br>
+<form action ="{% url 'end' %}" id="next">
+<input type ="submit" Value="Next Step"></form>
+
+</div>
+{% endblock %}

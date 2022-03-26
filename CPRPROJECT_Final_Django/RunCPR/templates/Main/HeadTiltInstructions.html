@@ -1,0 +1,20 @@
+{% extends 'Main/base.html' %}
+
+{% block content_block %}
+
+<div class="maincontent">
+<h1> Step 3: Head Tilt</h1>
+
+    <p> Now Let's prepare to do the rescue Breath. <br>
+        First, you will need to tilt the head. <br>
+        This opens the airway for the rescue breaths <br>
+        When you are beside the head, gently tilt the head towards the back. 
+        <br>
+        (Tilt head before pressing button)
+    </p>
+
+<form action ="{% url 'headtilt' %}" id="next">
+<input type ="submit" Value="Check Head Tilt"></form>
+
+</div>
+{% endblock %}

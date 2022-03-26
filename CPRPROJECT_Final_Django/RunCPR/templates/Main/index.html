@@ -1,31 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'Main/base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>M490-2122-08 CPR</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../Styles/index.css">
-</head>
-
-<body>
-    <header>
-        <h1>CPR MANIKIN WEBSITE (M490-2122-08)</h1>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutTeam.html">About</a></li>
-                <li><a href="aboutCPR.html">CPR Steps</a></li>
-            </ul>
-        </nav>
-    </header>
+{% block content_block %}
 
     <div class="maincontent">
             <div class="container-fluid" style="text-align:center";>
                 <div>
                     <p Style="color: red; text-align:center";>Pick a level to start learning or practicing CPR!</p>
                     <div class="">
-                        <h3><a href="">Level 1 CPR</a></h3>
+                        <h3><a href="{% url 'start' %}">Level 1 CPR</a></h3>
                         <p>Novice: Understanding the fundamentals of basic CPR</p>
                         <p>(includes checking the surrounding, pulse check, and compression frequency).</p>
                     </div>
@@ -65,11 +47,4 @@
             </div>
     </div>
     <br>
-
-    <div class="footer">
-        <div class="">
-            <h6>Copyright © 2021-2022 M490-2122-08 inc.</h6>
-        </div>
-    </div>
-
-</body>
+{% endblock %}

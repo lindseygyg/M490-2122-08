@@ -1,0 +1,18 @@
+{% extends 'Main/base.html' %}
+
+{% block content_block %}
+
+<div class="maincontent">
+<h1> Step 4 Rescue Breath</h1>
+
+    <p> Now let's do the rescue Breath. <br>
+        Place yourself beside the head now. <br>
+        Open the mouth slightly: place your fingers just below the ear, behind the jaw <br>
+        Breathe twice into the manikin's mouth making sure the chest rises. <br>
+    </p>
+<br>
+<form action ="{% url 'rescuebreath' %}" id="next">
+<input type ="submit" Value="Start"></form>
+
+</div>
+{% endblock %}

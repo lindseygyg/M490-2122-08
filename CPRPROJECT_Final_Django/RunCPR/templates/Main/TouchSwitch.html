@@ -1,0 +1,20 @@
+{% extends 'Main/base.html' %}
+
+{% block content_block %}
+
+<div class="maincontent">
+<p> Now Check the pulse</p>
+<p> The pulse was checked for: {{pulse_time}} </p>
+<p> Is the pulse check valid? {{pulse_result}} </p>
+<p> {{feedback}}  </p>
+
+<form action ="{% url 'pulse' %}" id="tryagain">
+<input type ="submit" Value="Try Again"></form>
+
+<br>
+
+<form action ="{% url 'CompressionInstructions' %}" id="next">
+<input type ="submit" Value="Next Step"></form>
+
+ </div>
+{% endblock %}
