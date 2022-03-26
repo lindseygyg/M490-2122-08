@@ -1,0 +1,17 @@
+{% extends 'Main/base.html' %}
+
+{% block content_block %}
+
+<div class="maincontent">
+<h1> Magnetic Switch Results  </h1>
+    <p> The touch sensor works: {{ms_result}} </p>
+
+   
+
+<form action ="{% url 'TestSensor' %}">
+    <input type="submit" Value="Main page"></form>
+
+
+</div>
+<br>
+{% endblock %}

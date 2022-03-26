@@ -2,14 +2,12 @@ import time
 import RPi.GPIO as GPIO
 
 class MagneticSwitch:
-    def __init__(self, pin1, pin2=None, test=False):
+    def __init__(self, pin1, pin2=None):
         self.magPIN = pin1
         self.magPIN2 = pin2
-        if test:
-            GPIO.setmode(GPIO.BOARD)
+        GPIO.setmode(GPIO.BCM)
         GPIO.setup(self.magPIN, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-        if self.magPIN2 is not None:
-            GPIO.setup(self.magPIN2, GPIO.IN, pull_up_down=GPIO.PUD_DOW)
+        GPIO.setup(self.magPIN2, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
     def testSwitch(self):
         count = 0
@@ -22,12 +20,15 @@ class MagneticSwitch:
 
     def testSwitches(self):
         count = 0
+        arr = []
         print("Testing magnetic contact for 10 seconds:")
         while count < 10:
-            print("first pin:", GPIO.input(self.magPIN), "& second pin:", GPIO.input(self.magPIN2))
+            strng = "first pin:" + str(GPIO.input(self.magPIN)) + " & second pin:" + str(GPIO.input(self.magPIN2))
+            arr.append(strng)
             count += 1
             time.sleep(1)
         print("Finished testSwitches function.")
+        return arr
 
     def checkSwitch(self, t=30):
         """
@@ -55,18 +56,13 @@ class MagneticSwitch:
             time.sleep(1)
         return False
 
-
 if __name__ == '__main__':
-    # ms = MagneticSwitch(22, True)  # BCM 25
-    ms = MagneticSwitch(22, 13, True)    # BCM 25, BCM 27
-
-    try:
-        while 1:
+    ms = MagneticSwitch(17, 18)  
             #print(ms.testSwitch())
-            ms.testSwitches()
+    print(ms.checkSwitches())
 
-    except KeyboardInterrupt:
-        print("Testing complete.")
+    
+     
 
 
 

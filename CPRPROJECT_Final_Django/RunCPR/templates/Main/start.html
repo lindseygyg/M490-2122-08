@@ -1,0 +1,16 @@
+{% extends 'Main/base.html' %}
+
+{% block content_block %}
+
+<div class="maincontent">
+<h1>Begin CPR</h1>
+
+<form action ="{% url 'CheckSurroundings' %}">
+<input type ="submit" Value="Go to Step 1"></form>
+
+
+<form action ="{% url 'index' %}">
+<input type ="submit" Value="Return to Main Page"></form>
+
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'Main/base.html' %}
+
+{% block content_block %}
+
+    <div class="maincontent">
+            <div class="container-fluid" style="text-align:center";>
+                    <p Style="color: red; text-align:center";>Pick a sensor to test!</p>
+                        <h3><a href="{% url 'TouchTest' %}">Touch Sensor</a></h3>
+                        <p>This sensor is for the pulse step of CPR.</p>
+
+                        <h3><a href="{% url 'BallTiltTest' %}">Ball Tilt Switch</a></h3>
+                        <p>This sensor is for verifying if you tilted the head for the rescue breaths (opens the airways).</p>
+
+                         <h3><a href="{% url 'MagneticTest' %}">Magnetic Switch</a></h3>
+                        <p>This is for verifying the placement of AED pads.</p>
+                        
+                        <h3><a href="{% url 'PressureTest' %}">Pressure Switch</a></h3>
+                        <p>Does the sensor for sensing if the breathing work?</p>
+                        
+                        <h3><a href="{% url 'CompressionTest' %}">Compression Mechanism</a></h3>
+                        <p>Make sure the compression system counts correctly.</p>
+
+			
+                <br>
+            </div>
+    </div>
+    <br>
+{% endblock %}

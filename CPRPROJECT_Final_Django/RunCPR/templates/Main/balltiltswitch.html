@@ -1,0 +1,17 @@
+{% extends 'Main/base.html' %}
+
+{% block content_block %}
+
+<div class="maincontent">
+<h1> Ball Tilt Switch Test </h1>
+
+<p> Result: {{ball_result}} </p>
+
+<form action ="{% url 'headtilt' %}" id="tryagain">
+<input type ="submit" Value="Try Again"></form>
+<br>
+<form action ="{% url 'RescueBreathInstructions' %}" id="next">
+<input type ="submit" Value="Next Step"></form>
+
+</div>
+{% endblock %}

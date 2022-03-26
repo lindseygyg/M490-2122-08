@@ -1,0 +1,17 @@
+{% extends 'Main/base.html' %}
+
+{% block content_block %}
+
+<div class="maincontent">
+<h1>Compression System Results  </h1>
+    <p> number of cycles performed: {{cycle}} </p>
+
+    <p> If the number of cycles performed is 3 , it means that the sensor works <br>
+    and that the compression was done correctly. </p>
+
+<form action ="{% url 'TestSensor' %}">
+    <input type="submit" Value="Main page"></form>
+
+</div>
+<br>
+{% endblock %}

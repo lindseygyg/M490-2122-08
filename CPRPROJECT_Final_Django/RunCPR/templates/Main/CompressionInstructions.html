@@ -1,0 +1,23 @@
+{% extends 'Main/base.html' %}
+
+{% block content_block %}
+
+<div class="maincontent">
+<h1> Step 2 Begin Compressions</h1>
+
+    <p> Assume there is no pulse. Since the person is not breathing and has no pulse, we will begin CPR.
+        The first step is to start with chest compressions <br>
+        You should do 30 compressions at a rate of 100 to 120 compressions per minute(or the song staying alive).<br>
+        - it helps to count out loud. <br>
+        Place your hands one on top of the other and interlace your fingers. <br>
+        Place them on the sternum (middle of chest).<br>
+        Ensure your arms remain straight and locked - begin compressions!<br>
+        The arms should remain straight, so make sure the movement comes from the body.<br>
+    </p>
+
+    <form action ="{% url 'compression' %}" id="next">
+      <br>
+<input type ="submit" Value="Start Compressions"></form>
+
+ </div>
+{% endblock %}
