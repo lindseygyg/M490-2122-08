@@ -1,0 +1,16 @@
+{% extends 'Main/base.html' %}
+
+{% block content_block %}
+
+<div class="maincontent">
+<h1>Ball Tilt Switch Results  </h1>
+    <p> The tilt sensor works: {{tilt_result}} </p>
+
+   
+
+<form action ="{% url 'TestSensor' %}">
+    <input type="submit" Value="Main page">
+
+</div>
+<br>
+{% endblock %}

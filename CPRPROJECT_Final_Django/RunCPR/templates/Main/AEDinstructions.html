@@ -1,0 +1,16 @@
+{% extends 'Main/base.html' %}
+
+{% block content_block %}
+
+<div class="maincontent">
+<h1> Step 6: AED placement </h1>
+
+    <p> Someone has arrived with an AED! <br>
+        Open the AED kit and place the pads on the manikin. <br>
+    </p>
+
+<form action ="{% url 'aed' %}" id="next">
+<input type ="submit" Value="Check"></form>
+
+</div>
+{% endblock %}

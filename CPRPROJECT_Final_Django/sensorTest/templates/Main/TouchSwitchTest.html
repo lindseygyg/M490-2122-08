@@ -1,0 +1,19 @@
+{% extends 'Main/base.html' %}
+
+{% block content_block %}
+
+<div class="maincontent">
+<h1>Touch Switch Test </h1>
+    <p> Now check if the touch sensor is working <br>
+        Please press start and then press on both sensors, <br>
+        They are found at each side of the neck of the manikin.</p>
+
+<form action ="{% url 'TouchResult' %}">
+<input type ="submit" Value="Start"></form>
+
+<form action ="{% url 'TestSensor' %}">
+    <input type="submit" Value="Main page"></form>
+
+</div>
+<br>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'Main/base.html' %}
+
+{% block content_block %}
+
+<div class="maincontent">
+<h1> Magnetic Switch Test </h1>
+    <p> Now check if the Magnetic sensors for the AED pads are working <br>
+        Please place AED pads on the top left and bottom right of the manikin <br>
+        then press the check button </p>
+
+<form action ="{% url 'MagneticResult' %}">
+<input type ="submit" Value="Check"></form>
+
+<form action ="{% url 'TestSensor' %}">
+    <input type="submit" Value="Main page"></form>
+
+</div>
+<br>
+{% endblock %}

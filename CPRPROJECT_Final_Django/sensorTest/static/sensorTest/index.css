@@ -18,6 +18,16 @@ body {
     Top, right, bottom, left padding */
 }
 
+.maincontent{
+    background-color:floralwhite;
+    color:black;
+    height: 100%;
+    width: 80%;
+    margin:auto;
+    flex: 1 0 auto;
+    text-align: center;
+}
+
 h1{
     padding-left: 25px;
 }
@@ -44,7 +54,7 @@ h1{
 }
 
 .navbar li a:hover {
-    color: red
+    color: gray;
 }
 
 .navbar input {
@@ -53,17 +63,6 @@ h1{
     padding: 3px 17px;
     width: 100%;
 }
-
-div {
-  background-color: white;
-  margin: 2px;
-  font-size: 25px;
-  border: black;
-}
-.instruction{
-
-}
-
 
 .footer {
     margin-top: auto;

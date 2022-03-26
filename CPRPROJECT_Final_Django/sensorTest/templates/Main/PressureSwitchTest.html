@@ -1,0 +1,21 @@
+{% extends 'Main/base.html' %}
+
+{% block content_block %}
+
+<div class="maincontent">
+<h1> Pressure Switch Test </h1>
+    <p> Now check if the pressure sensor is working. <br>
+        Insert the lung bag in the manikin. <br>
+        Press Start and perform one rescue breath</p>
+
+<form action ="{% url 'PressureResult' %}">
+<input type ="submit" Value="Start"></form>
+
+<form action ="{% url 'TestSensor' %}">
+    <input type="submit" Value="Main page"></form>
+
+
+
+</div>
+<br>
+{% endblock %}

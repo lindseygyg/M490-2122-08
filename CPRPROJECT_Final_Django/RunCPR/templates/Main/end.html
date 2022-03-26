@@ -1,0 +1,19 @@
+{% extends 'Main/base.html' %}
+
+{% block content_block %}
+
+<div class="maincontent">
+<h1> End </h1>
+
+    <p> Now that you have placed the AED pads correctly <br>
+        Follow the instructions of the AED until EMS arrives and takes over. </p>
+
+<form action ="{% url 'index' %}" id="end">
+<input type ="submit" Value="return to home page"></form>
+
+<form action ="{% url 'start' %}" >
+<input type ="submit" Value="start over"></form>
+
+
+</div>
+{% endblock %}

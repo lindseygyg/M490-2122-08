@@ -1,0 +1,20 @@
+{load static}
+{% extends 'Main/base.html' %}
+
+{% block content_block %}
+
+<div class="maincontent">
+<h1> Compression System Test </h1>
+
+<p> Number of Compressions: {{cycle}} </p>
+<p> Frequency: {{frequency}} compressions per minute</p>
+<p> {{feedback}} </p>
+
+<form action ="{% url 'compression' %}" id="next">
+<input type ="submit" Value="Try again"></form>
+<br>
+<form action ="{% url 'HeadTiltInstructions' %}" id="next">
+<input type ="submit" Value="Next Step"></form>
+
+</div>
+{% endblock %}

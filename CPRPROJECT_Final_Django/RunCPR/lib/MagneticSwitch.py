@@ -6,10 +6,10 @@ class MagneticSwitch:
         self.magPIN = pin1
         self.magPIN2 = pin2
         if test:
-            GPIO.setmode(GPIO.BOARD)
+            GPIO.setmode(GPIO.BCM)
         GPIO.setup(self.magPIN, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
         if self.magPIN2 is not None:
-            GPIO.setup(self.magPIN2, GPIO.IN, pull_up_down=GPIO.PUD_DOW)
+            GPIO.setup(self.magPIN2, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
     def testSwitch(self):
         count = 0
@@ -55,10 +55,9 @@ class MagneticSwitch:
             time.sleep(1)
         return False
 
-
 if __name__ == '__main__':
-    # ms = MagneticSwitch(22, True)  # BCM 25
-    ms = MagneticSwitch(22, 13, True)    # BCM 25, BCM 27
+    #ms = MagneticSwitch(22, True)  # BCM 25
+    ms = MagneticSwitch(17, 18, True)    # BCM 25, BCM 22
 
     try:
         while 1:

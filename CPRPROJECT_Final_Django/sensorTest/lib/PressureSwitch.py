@@ -46,49 +46,34 @@ class PressureSwitch:
         """
         while t:
             pressure_value = self.adjust_p(self.mpr.pressure)
-            if (self.atm - pressure_value) > 10:
+            if abs(self.atm - pressure_value) > 2:
                 return True
             time.sleep(1)
             # print(t)
             t -= 1
         return False
 
-    def testingSwitch(self):
-        self.update_atm(printout=1)
-        print("Get ready to blow (see pressure change)")
-        time.sleep(5)
-        print("Updating p reading (1st blow)...")
-        self.update_atm(printout=1)
-        print("Blow one more time.")
-        time.sleep(7)
-        print("Updating p reading (2nd blow)...")
-        self.update_atm(printout=1)
-        print("Finished testSwitch function.")
-
     def testSwitch(self, t=10):
-        print("Testing pressure switch: outputting pressure values.")
-
-        while t:
-            self.update_atm()
-            print(ps.atm)
-            time.sleep(1)
-            t -= 1
-
-        print("Testing pressure switch complete.")
-
+        """
+        Checking for breaths in a span of t seconds.
+        """
+        arr = []
+        
+        while t > 0:
+            pressure_value = self.adjust_p(self.mpr.pressure)
+            # print(pressure_value, self.atm, self.atm - pressure_value)
+            
+            arr.append(pressure_value)
+            
+            time.sleep(0.5)
+            # print(t)
+            t -= .5
+        return arr
 
 if __name__ == '__main__':
     ps = PressureSwitch()
-    #ps.testSwitch()
-    #if ps.checkSwitch(10):
-    #    print('It worked')
-    #else:
-    #    print("It did not work")
-    try:
-        while 1:
-            ps.update_atm()
-            print(ps.atm)
-            time.sleep(1)
-            
-    except KeyboardInterrupt:
-        print("done.")
+    print(ps.pressure_check(10))
+    if ps.checkSwitch(10):
+        print('It worked')
+    else:
+        print("It did not work")
