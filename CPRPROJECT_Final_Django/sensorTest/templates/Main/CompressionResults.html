@@ -6,11 +6,14 @@
 <h1>Compression System Results  </h1>
     <p> number of cycles performed: {{cycle}} </p>
 
-    <p> If the number of cycles performed is 3 , it means that the sensor works <br>
-    and that the compression was done correctly. </p>
+    <p> If the number of cycles performed is 3, it means that the sensor works <br>
+      and that the compressions were done correctly. </p>
 
+<form action ="{% url 'CompressionResult' %}">
+<input type ="submit" Value="Try Again"></form>
+<br>
 <form action ="{% url 'TestSensor' %}">
-    <input type="submit" Value="Main page"></form>
+<input type="submit" Value="Test Other Sensors"></form>
 
 </div>
 <br>

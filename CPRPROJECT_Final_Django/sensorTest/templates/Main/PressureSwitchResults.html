@@ -6,10 +6,11 @@
 <h1>Pressure Switch Results  </h1>
     <p> The touch sensor works: {{ps_result}} </p>
 
-  
-
+<form action ="{% url 'PressureResult' %}">
+<input type ="submit" Value="Try Again"></form>
+<br>
 <form action ="{% url 'TestSensor' %}">
-    <input type="submit" Value="Main page"></form>
+<input type="submit" Value="Test Other Sensors"></form>
 
 </div>
 <br>

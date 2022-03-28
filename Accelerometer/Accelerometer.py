@@ -10,7 +10,7 @@ from scipy import signal
 
 #from mpu9250_i2c import *   # TRY THIS ONE????????
 
-class Accelerometer_LYG:
+class Accelerometer:
 
     def __init__(self, address, bus=1):
         self.address = address
@@ -33,7 +33,7 @@ class Accelerometer_LYG:
 
         self.offsets = None
 
-        # TODO: SEE IF THIS WORKS HERE
+        # TODO: TEST IF THIS WORKS HERE
         # Because if it is in the manikin, will already be "face-up" in position
         # self.accel_coeffs = self.calibration()
 
