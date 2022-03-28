@@ -7,9 +7,11 @@
     <p> The touch sensor works: {{ms_result}} </p>
 
    
-
+<form action ="{% url 'MagneticResult' %}">
+<input type ="submit" Value="Try Again"></form>
+<br>
 <form action ="{% url 'TestSensor' %}">
-    <input type="submit" Value="Main page"></form>
+    <input type="submit" Value="Test Other Sensors"></form>
 
 
 </div>

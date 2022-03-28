@@ -6,10 +6,11 @@
 <h1>Ball Tilt Switch Results  </h1>
     <p> The tilt sensor works: {{tilt_result}} </p>
 
-   
-
+<form action ="{% url 'BallTiltResult' %}">
+<input type ="submit" Value="Try Again"></form>
+<br>
 <form action ="{% url 'TestSensor' %}">
-    <input type="submit" Value="Main page">
+    <input type="submit" Value="Test Other Sensors">
 
 </div>
 <br>

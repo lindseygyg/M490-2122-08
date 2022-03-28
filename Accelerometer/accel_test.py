@@ -334,7 +334,7 @@ if __name__ == '__main__':
     ta = []
     aa = []
 
-    file = r'/Users/lindsey/Desktop/data_raw_accel.csv'#/Users/lindsey/Desktop/data_raw_accel.csv
+    file = r'data_raw_accel.csv'#/Users/lindsey/Desktop/data_raw_accel.csv
     reader = csv.DictReader(open(file))
     for raw in reader:
         ta.append(float(raw['t']))

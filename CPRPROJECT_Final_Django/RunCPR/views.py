@@ -41,6 +41,9 @@ def AEDinstructions(request):
 def end(request):
     return render(request, 'Main/end.html')
 
+def underConstruction(request):
+    return render(request, 'Main/underConstruction.html')
+
 
 class TouchSwitchView(TemplateView):
     template_name = 'Main/TouchSwitch.html'
