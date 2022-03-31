@@ -77,7 +77,6 @@ class CompressionSystem:
         # get initial time
         # starts at top so do not add to the bottomTimes
         t0 = time.time() 
-        
 
         while cycle < cycles:
             b = GPIO.input(self.bottomPIN)
@@ -137,8 +136,9 @@ class CompressionSystem:
         cycleTime = []
         for i in range(len(bottomTimes)-1):
             cycleTime.append(bottomTimes[i+1] - bottomTimes[i])
-            
-        entireTime = bottomTimes[-1] - bottomTimes[0] # s
+
+        # adding small number to avoid ZeroDivision Error
+        entireTime = bottomTimes[-1] - bottomTimes[0] + 0.000001 # s
             
         #freq = cycle/(60*np.mean(cycleTime)) # minutes
         #freq = 1/np.mean(cycleTime)

@@ -1,7 +1,7 @@
 import time
 import RPi.GPIO as GPIO
 import numpy as np
-
+import ZeroDivisionError
 
 class CompressionSystem:
     """
@@ -133,13 +133,16 @@ class CompressionSystem:
 
         #print("Number of compressions:", len(bottomTimes))
 
+        #try:
         cycleTime = []
         for i in range(len(bottomTimes)-1):
             cycleTime.append(bottomTimes[i+1] - bottomTimes[i])
-            
-        entireTime = bottomTimes[-1] - bottomTimes[0] # s
+
+        entireTime = bottomTimes[-1] - bottomTimes[0] + 0.0000001 # s
 
         freq = cycle*60/entireTime
+
+        #except ZeroDivisionError: freq = 0
         
         print("frequency:", freq)
         print("Number of compressions:", cycle)
@@ -149,7 +152,7 @@ class CompressionSystem:
         #print("Average frequency:", freq, "compressions per minute")
         #print("Finished compressions:", cycle, "at", freq)
 
-        return cycle,freq
+        return cycle, freq
 
 
 if __name__ == '__main__':
