@@ -54,7 +54,7 @@ h1{
 }
 
 .navbar li a:hover {
-    color: gray;
+    color: red;
 }
 
 .navbar input {
